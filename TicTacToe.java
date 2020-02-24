@@ -36,21 +36,16 @@ public class TicTacToe {
 
             if (player == 1) {
                 slots[i] = turn[0];
-                System.out.println("---------");
-                System.out.println(slots[0] + " | " + slots[1] + " | " + slots[2]);
-                System.out.println(slots[3] + " | " + slots[4] + " | " + slots[5]);
-                System.out.println(slots[6] + " | " + slots[7] + " | " + slots[8]);
-                System.out.println("---------");
                 player = 0;
             } else {
                 slots[i] = turn[1];
-                System.out.println("---------");
-                System.out.println(slots[0] + " | " + slots[1] + " | " + slots[2]);
-                System.out.println(slots[3] + " | " + slots[4] + " | " + slots[5]);
-                System.out.println(slots[6] + " | " + slots[7] + " | " + slots[8]);
-                System.out.println("---------");
                 player = 1;
             }
+            System.out.println("---------");
+            System.out.println(slots[0] + " | " + slots[1] + " | " + slots[2]);
+            System.out.println(slots[3] + " | " + slots[4] + " | " + slots[5]);
+            System.out.println(slots[6] + " | " + slots[7] + " | " + slots[8]);
+            System.out.println("---------");
         }
         if(checkWin(slots,"XXX") == 0){
             System.out.println("Joueur X a gagne");
@@ -61,8 +56,3 @@ public class TicTacToe {
     }
 
 }
-
-
-
-
-
