@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class TicTacToe {
-    public static int checkwin(String[] slots,String symbol){
+    public static int checkWin(String[] slots,String symbol){
         for(int i=0;i<7;i += 3) {
             if ((slots[i] + slots[i+1] + slots[i + 2]).equals(symbol))
                 return 0;
@@ -29,7 +29,7 @@ public class TicTacToe {
         System.out.println(slots[3]+" | "+slots[4]+" | "+slots[5]);
         System.out.println(slots[6]+" | "+slots[7]+" | "+slots[8]);
         System.out.println("---------");
-        while(checkwin(slots,"XXX") == 1 && checkwin(slots,"OOO") == 1) {
+        while(checkWin(slots,"XXX") == 1 && checkWin(slots,"OOO") == 1) {
             System.out.println("Choisissez une case");
             String choix = input.nextLine();
             int i = Integer.parseInt(choix) - 1;
@@ -52,7 +52,7 @@ public class TicTacToe {
                 player = 1;
             }
         }
-        if(checkwin(slots,"XXX") == 0){
+        if(checkWin(slots,"XXX") == 0){
             System.out.println("Joueur X a gagne");
         }
         else{
